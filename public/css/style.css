@@ -385,7 +385,7 @@ h3{
 	width: 75%;
 	margin: 20px auto;
 	padding: 20px 10px;
-	font-size: 18px;
+	font-size: 17px;
 	font-weight: 100px;
 	border-radius: 3px;
 }
@@ -393,6 +393,27 @@ h3{
 .contact-us-textarea{
 	max-height: 150px;
 	padding-top: 10px;
+}
+
+.captcha_container{
+	width: 75%;
+	margin: 0 auto;
+	margin-bottom: 35px;
+}
+
+.captcha_container img{
+	width: 35%;
+	display: inline-block;
+}
+
+.captcha_container input{
+	width: 60%;
+	display: inline-block;
+	padding: 20px 10px;
+	margin-left: 20px;
+	font-size: 17px;
+	font-weight: 100px;
+	vertical-align: middle;
 }
 
 .contact-us-label{
@@ -434,6 +455,10 @@ h3{
 	color: #888;
 	font-size: 18px;
 
+}
+
+.alert{
+	text-align: center;
 }
 
 
