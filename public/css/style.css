@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	background: #333;
+	color: #ffffff;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+h1{
+	font-size: 50px;
+	text-align: center;
+	font-weight: 100;
+}
+
+h2{
+	font-size: 60px;
+	text-align: center;
+	font-weight: 200;
+}
+
+h3{
+	font-weight: 200;
+	font-size: 30px;
+	text-align: center;
+}
+
+
+#nav-header{
+	height: 70px;
+	background: rgba(51,51,51,0.2);
+	color:#ffffff;
+	position: fixed;
+	font-weight: 200;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+#header-logo{
+	float: left;
+	font-size: 25px;
+	padding: 2px 10px;
+	border: 2px solid #ffffff;
+	margin:10px;
+	color: #ffffff;
+}
+#header-logo span {
+	font-weight: 600;
+}
+
+#nav-header a{
+	color: #ffffff;
+}
+
+
+#main-navbar li{
+	float: left;
+	list-style: none;
+	padding: 10px 20px;
+	font-size: 18px;
+	cursor: pointer;
+	-webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
+
+}
+
+#main-navbar li:hover{
+	background: rgba(204, 204, 204, 0.2);
+	color: #fff;
+}
+
+#phone-section{
+	font-size: 24px;
+	float: right;
+	padding: 5px 25px;
+	color: #fff !important;
+}
+
+
+#site-footer{
+	background: #333;
+	border-top: 1px solid #666;
+}
+
+#footer-navbar{
+	text-align: center;
+}
+#footer-navbar li{
+	list-style: none;
+	padding: 10px 20px;
+	font-size: 18px;
+	font-weight: 200;
+	cursor: pointer;
+	color: #888;
+	display: inline-table;
+	-webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
+}
+
+#footer-navbar li:hover{
+	color: #fff;
+}
+
+#home{
+	height: 100%;
+}
+.parallax {
+  perspective: 1px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax-layer-base {
+  transform: translateZ(0);
+
+}
+
+.parallax-layer-back {
+ 	transform: translateZ(-1px) scale(2);
+}
+
+.parallax-layer-back #hero-shot-bg{
+	background: url() no-repeat center 33%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	opacity: 0.5;
+	height: 600px;
+	background-position-y: 0px;
+}
+
+.parallax-layer-back #trusted-renovators-bg{
+	background: url() no-repeat center 33%;
+	background-position-y: -240px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin-top: 450px;
+	height: 600px;
+}
+
+
+#hero-title{
+	font-size: 60px;
+	text-align: center;
+	color: #ffffff;
+	font-weight: 100;
+	padding: 27vh 0vh 20vh 0vh;
+}
+
+#hero-title a{
+	color: #fff;
+}
+
+#hero-title span, #trusted-renovators-section span{
+	font-weight: 400;
+}
+
+.hero-shot-btn{
+	background: rgba(51,51,51,0.5);
+	border: 2px solid #ffffff;
+	font-size: 32px;
+	font-weight: 200;
+	padding: 10px 15px;
+	margin-top: 30px;
+	-webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
+}
+
+.hero-shot-btn:hover{
+	background: #ffffff;
+	color: #333;
+}
+
+#what-we-do-section, #recent-projects-section, #specialize-section, #get-quote-section{
+	background: #333;
+	color: #ffffff;
+}
+
+#what-we-do-section{
+	padding: 15px 0px 60px 0px;
+}
+
+#trusted-renovators-section{
+	font-size: 60px;
+	color: #333;
+	line-height: 120%;
+	font-weight: 300;
+	padding: 15vh 0vh 10vh 10vh;
+}
+
+
+#view-story-text{
+	font-size: 20px;
+	font-weight: bold !important;
+	color: #666;
+	-webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
+
+}
+
+#view-story-text:hover{
+	color: #333;
+}
+
+#trusted-renovators-section a{
+	color: #333;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+
+#specialize-section{
+	padding: 0px 0px 60px 0px;
+}
+
+#specialize-section h1{
+	padding-top: 90px;
+	font-size: 60px;
+}
+
+#view-services-text{
+	font-size: 17px;
+	font-weight: bold;
+	color: #888;
+	-webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
+}
+
+#view-services-text:hover{
+	color:#fff;
+}
+
+
+#specialize-section a{
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	
+}
+
+.specialize-item{
+	font-size: 20px;
+	font-weight: 200;
+	margin: 20px 0;
+	margin-left: 20px;
+}
+.specialize-row{
+	width: 95%;
+	margin: 0 auto;
+}
+
+.specialize-bg{
+	background: url() no-repeat center 33%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 90%;
+	margin: 30px auto;
+
+	-webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
+	
+}
+
+.specialize-text{
+	padding: 155px 0;
+}
+
+.what-we-do-text{
+	text-align: center;
+	font-size: 19px;
+	line-height: 150%;
+	font-weight: 200;
+	letter-spacing: 0.5px;
+}
+
+.what-we-do-img{
+	width: 35%;
+	margin: 30px auto;
+}
+
+ #recent-projects-section{
+	padding:20px 0px 60px 0px;
+}
+
+
+.recent-project-img{
+	width: 100%;
+	margin: 30px auto;
+}
+
+#get-quote-section{
+	padding: 0px 60px 70px 60px;
+	text-align: center;
+}
+
+#get-quote-section h1{
+	margin-top: 0px;
+}
+
+#get-quote-section a{
+	color: #fff;
+}
+
+.pages-header{
+	font-size: 60px;
+}
+
+#contact-us, #testimonials{
+	margin: 80px 0px 60px 0px;
+}
+
+.pages-header span{
+	font-weight: 400;
+}
+
+#contact-us-hero{
+	background: url() no-repeat center 43%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 300px;
+	opacity: 0.4;
+	border-radius: 3px;
+	margin-top: 10px;
+}
+
+.contact-us-section{
+	text-align: left;
+	padding-top: 30px;
+}
+
+.contact-us-section a{
+	color: #fff;
+
+}
+
+.contact-us-section h3{
+	text-align: left;
+}
+
+.contact-us-section p{
+	font-weight: 200;
+	font-size: 19px;
+	letter-spacing: 0.5px;
+}
+
+.contact-us-form{
+	width: 75%;
+	margin: 30px auto;
+	padding: 20px 10px;
+	font-size: 18px;
+	font-weight: 100px;
+	border-radius: 3px;
+}
+
+.contact-us-textarea{
+	max-height: 150px;
+	padding-top: 10px;
+}
+
+.contact-us-btn{
+	font-size: 25px;
+	padding: 10px;
+	margin-top: 0px;
+}
+
+.testimonial-row{
+	border-bottom: 1px solid #666;
+	padding: 50px;
+}
+
+.testimonial-text{
+	font-weight: 200;
+	font-size: 19px;
+	text-align: center;
+	letter-spacing: 0.5px;
+	
+}
+
+.testimonial-divider{
+	color: #444;
+	padding: 10px;
+}
+
+.testimonial-author{
+	color: #888;
+	font-size: 18px;
+
+}
+
+
+
+
