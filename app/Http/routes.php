@@ -18,6 +18,8 @@ Route::get('/', 'IndexController@index');
 
 Route::get('/contact-us', 'PagesController@contactus');
 
+Route::post('/contact-us/sendemail', 'PagesController@sendemail');
+
 Route::get('/testimonials', 'PagesController@testimonials');
 
 

@@ -383,7 +383,7 @@ h3{
 
 .contact-us-form{
 	width: 75%;
-	margin: 30px auto;
+	margin: 20px auto;
 	padding: 20px 10px;
 	font-size: 18px;
 	font-weight: 100px;
@@ -393,6 +393,17 @@ h3{
 .contact-us-textarea{
 	max-height: 150px;
 	padding-top: 10px;
+}
+
+.contact-us-label{
+	width: 75%;
+	margin: 0px auto 5px auto;
+}
+
+.contact-us-select{
+	width: 75%;
+	margin: 0 auto;
+	font-size: 18px;
 }
 
 .contact-us-btn{

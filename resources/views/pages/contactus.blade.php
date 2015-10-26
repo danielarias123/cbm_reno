@@ -35,10 +35,12 @@
 					<div class="contact-us-section">
 						<h3 style = "text-align:center;">Tell us a little about your project...</h3>
 						<div id = "contact-us-form">
-							{!! Form::open() !!}
+							{!! Form::open(array('action' => 'PagesController@sendemail')) !!}
 							{!! Form::text('name', $value = null, array('placeholder' => 'Name', 'class' => 'form-control contact-us-form')) !!}
-							{!! Form::text('email', $value = null, array('placeholder' => 'Email', 'class' => 'form-control contact-us-form')) !!}
-							{!! Form::text('phone', $value = null, array('placeholder' => 'Phone Number', 'class' => 'form-control contact-us-form')) !!}
+							{!! Form::email('email', $value = null, array('placeholder' => 'Email', 'class' => 'form-control contact-us-form')) !!}
+							{!! Form::text('phone', $value = null, array('placeholder' => 'Phone Number', 'class' => 'form-control contact-us-form', 'style' => "margin-bottom:15px;")) !!}
+							<div class = 'contact-us-label'>Project Type</div>
+							{!! Form::select('job_type', array('Kitchen' => 'Kitchen', 'Bathroom' => 'Bathroom', 'Basement' => 'Basement', 'Addition' => 'Addition', 'Commercial' => 'Commercial', 'Exterior' => 'Exterior', 'Other' => 'Other'), null, array('class' => 'form-control contact-us-select')) !!}
 							{!! Form::textarea('message', $value = null, array('placeholder' => 'Message', 'class' => 'form-control contact-us-form contact-us-textarea')) !!}
 							<p style = "text-align:center;">{!! Form::submit('Send', array('class' => 'hero-shot-btn contact-us-btn')) !!}</p>
 							{!! Form::close() !!}
