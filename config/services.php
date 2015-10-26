@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => '',
-        'secret' => '',
+        'domain' => 'cbmreno.ca',
+        'secret' => 'key-02db8025abd82d4093987a4270bb4186',
     ],
 
     'mandrill' => [
