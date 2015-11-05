@@ -54,7 +54,9 @@ class PagesController extends BaseController
 
             Mail::send('emails.quote', $email_data, function($message) use ($posted_data)
             {
-              $message->to('danielarias_123@msn.com', 'CBM Renovations')
+              $message->to('daniel.arias@chefsplate.com', 'CBM Renovations')
+                      ->subject('Message received from '. $posted_data['name']);
+              $message->to('arias531@hotmail.com', 'CBM Renovations')
                       ->subject('Message received from '. $posted_data['name']);
             });
         }

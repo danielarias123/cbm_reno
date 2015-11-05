@@ -1,6 +1,8 @@
 @extends('layouts.layout')
 
 @section('content')
+
+	<!-- Testimonials Section -->
 	<section id = "testimonials">
 		<div class = "container">
 			<div class = 'row'>
@@ -70,8 +72,41 @@
 			</div>
 		</div>
 	</section>
-
+	<!-- End Testimonials Section -->
+	<section id = "get-quote-section">
+		<div class = "container">
+			<a href = "/contact-us"><button class = "hero-shot-btn">Book Your Free Consultation</button></a>
+		</div>
+	</section>
 	<!-- Site Wide Footer -->
 	@include('includes.footer')
-</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			
+			$(window).scroll(function(){
+			    if($("#testimonials").offset().top < $(document).scrollTop()){
+
+			    	$( "#nav-header").css({ 
+			    		'border-bottom':'1px solid #666',
+			    		'color':'#b5b5b5',
+			    		'background': 'rgba(51,51,51,'+Math.abs($("#testimonials").offset().top/80)+')'
+			    	});
+
+			    	$("#main-navbar a").css({
+			    		'color':'#b5b5b5'
+			    	});
+			    }else{
+			    	$( "#nav-header").css({'background': 'rgba(51,51,51,0.2)', 
+			    		'border-bottom':'none',
+			    		'color':"#fff"});
+
+			    	$("#main-navbar a").css({
+			    		'color':'#fff'
+			    	});
+			    }
+			});
+		});
+	</script>
 @stop

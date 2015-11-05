@@ -2,6 +2,10 @@
 
 @section('content')
 	<section id = "contact-us">
+		<h1 class = "pages-header">Contact Us</h1>
+		<div id = "map-container">
+			<div id="map"></div>
+		</div>
 		<div class = "container">
 			@if(Session::has('form-success'))
 				@if(Session::get('form-success') == true)
@@ -15,16 +19,6 @@
 					</div>
 				@endif
 			@endif
-			<div class = 'row'>
-				<div class = "col-sm-12">
-					<h1 class = "pages-header">Contact Us</h1>
-				</div>
-			</div>
-			<div class = 'row'>
-				<div class = "col-sm-12">
-					<div id = "contact-us-hero" style="background-image: url(/images/contact-us-hero.jpg);"></div>
-				</div>
-			</div>
 
 			<div class = 'row'>
 				<div class = "col-sm-6">
@@ -38,9 +32,7 @@
 						<p>2426 Chateau Common<br/>
 						L6M 0S1<br/>
 						Oakville, ON
-						</p><br/>
-					
-						<iframe src="https://www.google.com/maps/d/embed?mid=zGwqgR5wqE1E.kjGd14QdgyNc" width="550" height="300"></iframe>
+						</p>
 					</div>
 				</div>
 				<div class = "col-sm-6">
@@ -69,32 +61,60 @@
 	@include('includes.footer')
 
 	<script type="text/javascript">
-	$(document).ready(function(){
 
-		$( ".alert" ).delay(6000).fadeOut();
-		
-		$(window).scroll(function(){
-		    if($("#contact-us").offset().top < $(document).scrollTop()){
+		var map;
 
-		    	$( "#nav-header").css({ 
-		    		'border-bottom':'1px solid #666',
-		    		'color':'#b5b5b5',
-		    		'background': 'rgba(51,51,51,'+Math.abs($("#contact-us").offset().top/80)+')'
-		    	});
+		// Function to set yp Google Map
+		function initMap() {
+		  map = new google.maps.Map(document.getElementById('map'), {
+		    center: {lat: 43.428504, lng: -79.70},
+		    zoom: 9,
+		    scrollwheel: false,
+		    disableDefaultUI: true
+		  });
+		  // Style the Map
+		var dark_style = 
+			[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{
+         featureType: "road",
+         elementType: "labels",
+         stylers: [
+           { visibility: "off" }
+         ]
+       }];
+		map.setOptions({styles: dark_style});
 
-		    	$("#main-navbar a").css({
-		    		'color':'#b5b5b5'
-		    	});
-		    }else{
-		    	$( "#nav-header").css({'background': 'rgba(51,51,51,0.2)', 
-		    		'border-bottom':'none',
-		    		'color':"#fff"});
+		}
 
-		    	$("#main-navbar a").css({
-		    		'color':'#fff'
-		    	});
-		    }
+		$(document).ready(function(){
+
+			$( ".alert" ).delay(6000).fadeOut();
+			
+			$(window).scroll(function(){
+			    if($("#contact-us").offset().top < $(document).scrollTop()){
+
+			    	$( "#nav-header").css({ 
+			    		'border-bottom':'1px solid #666',
+			    		'color':'#b5b5b5',
+			    		'background': 'rgba(51,51,51,'+Math.abs($("#contact-us").offset().top/80)+')'
+			    	});
+
+			    	$("#main-navbar a").css({
+			    		'color':'#b5b5b5'
+			    	});
+			    }else{
+			    	$( "#nav-header").css({'background': 'rgba(51,51,51,0.2)', 
+			    		'border-bottom':'none',
+			    		'color':"#fff"});
+
+			    	$("#main-navbar a").css({
+			    		'color':'#fff'
+			    	});
+			    }
+			});
 		});
-	});
-</script>
+	</script>
+
+	<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxXcm_dyzOBtB6jUSaHnPpHiLhLP1A9fk&callback=initMap">
+    </script>
 @stop
