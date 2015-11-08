@@ -63,6 +63,10 @@
 		</div>
 	</section>
 
+	<!-- Logos Section -->
+	@include('includes.logos')
+	<!-- End Logos Section -->
+
 	<!-- Site Wide Footer -->
 	@include('includes.footer')
 
