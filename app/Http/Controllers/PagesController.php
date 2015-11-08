@@ -17,7 +17,6 @@ class PagesController extends BaseController
 
     public function contactus()
     {
-    	//couple ways to pass variables to the view ( can also use with method) or (compact('menu'))
     	return view('pages.contactus');
     }
 
@@ -66,8 +65,22 @@ class PagesController extends BaseController
 
     public function testimonials()
     {
-    	//couple ways to pass variables to the view ( can also use with method) or (compact('menu'))
     	return view('pages.testimonials');
+    }
+
+    public function ourservices()
+    {
+        return view('pages.ourservices');
+    }
+
+    public function ourstory()
+    {
+        return view('pages.ourstory');
+    }
+
+    public function projects()
+    {
+        return view('pages.projects');
     }
 
 }

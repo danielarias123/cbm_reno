@@ -3,9 +3,9 @@
 	<div class = "main-navbar-container">
 		<ul id = "main-navbar">
 			<a href = "/"><li>Home</li></a>
-			<li>Our Services</li>
-			<li>Gallery</li>
-			<li>Our Story</li>
+			<a href = "/ourservices"><li>Our Services</li></a>
+			<a href = "/projects"><li>Projects</li></a>
+			<a href = "/ourstory"><li>Our Story</li></a>
 			<a href = "/testimonials"><li>Testimonials</li></a>
 			<a href = "/contact-us"><li>Contact Us</li></a>
 		</ul>

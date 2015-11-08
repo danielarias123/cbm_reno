@@ -22,4 +22,10 @@ Route::post('/contact-us/sendemail', 'PagesController@sendemail');
 
 Route::get('/testimonials', 'PagesController@testimonials');
 
+Route::get('/ourservices', 'PagesController@ourservices');
+
+Route::get('/ourstory', 'PagesController@ourstory');
+
+Route::get('/projects', 'PagesController@projects');
+
 

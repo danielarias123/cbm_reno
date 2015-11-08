@@ -75,9 +75,20 @@
 	<!-- End Testimonials Section -->
 	<section id = "get-quote-section">
 		<div class = "container">
-			<a href = "/contact-us"><button class = "hero-shot-btn">Book Your Free Consultation</button></a>
+			<div class = "row">
+				<div class = 'col-sm-12'>
+					<a><button class = "hero-shot-btn">Submit Your Own</button></a>
+
+					<div class = 'book-consultation-link'><a href = "/contact-us"><span class="glyphicon glyphicon-comment" style = 'vertical-align:text-top; color:#888;'></span>&nbsp;&nbsp;Book Your Free Consultation</a></div>
+				</div>
+			</div>
 		</div>
 	</section>
+
+	<!-- Logos Section -->
+	@include('includes.logos')
+	<!-- End Logos Section -->
+
 	<!-- Site Wide Footer -->
 	@include('includes.footer')
 

@@ -74,7 +74,7 @@
 						<div class = "col-sm-6" style = "text-align:center;">
 							<h1>What We Offer</h1>
 							<div class = "what-we-do-text">We offer contracting services for the entire home. Be it a small bathroom renovation or an entire home remodel, we have the knowledge and experience to get the job done.</div><br/>
-							<a><span id = "view-services-text">VIEW ALL OUR SERVICES</span></a><br/>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.
+							<a href = '/ourservices'><span id = "view-services-text">VIEW ALL OUR SERVICES</span></a><br/>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.
 						</div>
 						<div class = "col-sm-6">
 							<div class = "specialize-bg" style="background-image: url(/images/bathroom-frontpage.jpg);">
@@ -101,7 +101,7 @@
 			<!-- Section Trusted Renovators -->
 			<section id = "trusted-renovators-section">
 				<span>Trusted</span> Contractors<br /> in the <span>GTA</span> for over <span>20 years</span><br />
-				<a><span id = "view-story-text">CHECK OUT OUR STORY</span></a>
+				<a href = '/ourstory'><span id = "view-story-text">CHECK OUT OUR STORY</span></a>
 			</section>
 			<!-- End Section Trusted Renovators -->
 
@@ -156,8 +156,9 @@
 				</div>
 			</section>
 			<!-- End Get Quote Section -->
-
-
+			<!-- Logos Section -->
+			@include('includes.logos')
+			<!-- End Logos Section -->
 
 			<!-- Site Wide Footer -->
 			@include('includes.footer')

@@ -99,7 +99,7 @@ h3{
 }
 #footer-navbar li{
 	list-style: none;
-	padding: 10px 20px;
+	padding: 10px 20px 7px 20px;
 	font-size: 18px;
 	font-weight: 200;
 	cursor: pointer;
@@ -109,6 +109,13 @@ h3{
   	-moz-transition: all 500ms;
   	-o-transition: all 500ms;
  	transition: all 500ms;
+}
+
+.copyright-text{
+	text-align: center;
+	color: #666;
+	margin: 5px 10px;
+	font-weight: 300;
 }
 
 #footer-navbar li:hover{
@@ -325,7 +332,7 @@ h3{
 }
 
 #get-quote-section{
-	padding: 0px 60px 70px 60px;
+	padding: 0px 60px 30px 60px;
 	text-align: center;
 }
 
@@ -337,11 +344,31 @@ h3{
 	color: #fff;
 }
 
+#logos-section{
+	padding: 50px;
+	background: #333;
+}
+
+.logo-image{
+	margin: 0 auto;
+	display: block;
+	max-width: 210px;
+	max-height: 60px;
+}
+.n49-logo{
+	max-width: 130px;
+	margin-top: 10px;
+}
+
+.trustedpros-logo{
+	margin-top: 10px;
+}
+
 .pages-header{
 	font-size: 60px;
 }
 
-#contact-us, #testimonials{
+#contact-us, #testimonials, #our-services{
 	margin: 80px 0px 40px 0px;
 }
 
@@ -433,6 +460,18 @@ h3{
 	margin-top: 0px;
 }
 
+.book-consultation-link{
+	font-size: 30px;
+	font-weight: 300;
+	margin-top: 30px;
+	
+}
+
+.book-consultation-link a{
+	color: #888 !important;
+	text-decoration: none;
+}
+
 .testimonial-row{
 	border-bottom: 1px solid #666;
 	padding: 50px;
@@ -469,6 +508,26 @@ h3{
 
 #map {
 	height: 100%;
+}
+
+.our-services-overview-text{
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	margin: 0 auto;
+	margin-top: 60px;
+	width: 80%;
+}
+
+.our-services-banner{
+	width: 100%;
+	height: 370px;
+	background: url() no-repeat center 53%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	opacity: 0.7;
 }
 
 

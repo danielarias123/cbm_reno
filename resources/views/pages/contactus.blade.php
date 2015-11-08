@@ -2,7 +2,13 @@
 
 @section('content')
 	<section id = "contact-us">
-		<h1 class = "pages-header">Contact Us</h1>
+		<div class = 'container'>
+			<div class = "row">
+				<div class = 'col-sm-12'>
+					<h1 class = "pages-header">Contact Us</h1>
+				</div>
+			</div>
+		</div>
 		<div id = "map-container">
 			<div id="map"></div>
 		</div>
@@ -27,7 +33,7 @@
 						<p>We service areas within the GTA including Oakville, Burlington, Hamilton, Mississauga, Milton, Brampton and Etobicoke. </p><br/>
 						<p>To book a free consultation or if you have any general questions, fill out the form and one of our representatives will contact you as soon as possible.</p><br/>
 						<p><span class="glyphicon glyphicon-earphone" style = "vertical-align: text-top; color:#888;" aria-hidden="true"></span>&nbsp;&nbsp;<a href ="tel:647-785-7125">647 785 7125</a><br/>
-							<span class="glyphicon glyphicon-envelope" style = "vertical-align: text-top; color:#888;" aria-hidden="true"></span>&nbsp;&nbsp;info@cbmreno.ca
+							<span class="glyphicon glyphicon-envelope" style = "vertical-align: text-top; color:#888;" aria-hidden="true"></span>&nbsp;&nbsp;<a href="mailto:info@cbmreno.ca">info@cbmreno.ca</a>
 						</p><br/>
 						<p>2426 Chateau Common<br/>
 						L6M 0S1<br/>
