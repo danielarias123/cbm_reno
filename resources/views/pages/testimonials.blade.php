@@ -5,6 +5,11 @@
 	<!-- Testimonials Section -->
 	<section id = "testimonials">
 		<div class = "container">
+			@if(Session::has('testimonial-sent'))
+					<div class="alert alert-success">
+					  {!! Session::get('message')!!}
+					</div>
+			@endif
 			<div class = 'row'>
 				<div class = "col-sm-12">
 					<h1 class = "pages-header">Testimonials</h1>
@@ -73,17 +78,43 @@
 		</div>
 	</section>
 	<!-- End Testimonials Section -->
+	<!-- Quote Section -->
 	<section id = "get-quote-section">
 		<div class = "container">
 			<div class = "row">
 				<div class = 'col-sm-12'>
-					<a><button class = "hero-shot-btn">Submit Your Own</button></a>
+					<button type='button' class = "hero-shot-btn" data-toggle="modal" data-target="#testimonialModal">Submit Your Own</button>
 
 					<div class = 'book-consultation-link'><a href = "/contact-us"><span class="glyphicon glyphicon-comment" style = 'vertical-align:text-top; color:#888;'></span>&nbsp;&nbsp;Book Your Free Consultation</a></div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!-- End Quote Section -->
+
+	<!-- Testimonial Modal -->
+	<div class="modal fade" id="testimonialModal" tabindex="-1" role="dialog" aria-labelledby="testimonialModalLabel">
+	  <div class="modal-dialog testimonial-modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header" style = 'background:#444; border-bottom:none;'>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style = 'color:#fff;'><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="testimonialModalLabel">Share your experience with CBM Renovations</h4>
+	      </div>
+	      {!! Form::open(array('action' => 'PagesController@sendtestimonial')) !!}
+	      <div class="modal-body" style = 'background:#333;'>
+	        {!! Form::text('name', $value = null, array('placeholder' => 'Name', 'class' => 'form-control contact-us-form', 'required' => 'required')) !!}
+	        {!! Form::text('location', $value = null, array('placeholder' => 'Location', 'class' => 'form-control contact-us-form', 'required' => 'required')) !!}
+	        {!! Form::textarea('testimonial_text', $value = null, array('placeholder' => 'Testimonial', 'class' => 'form-control contact-us-form contact-us-textarea', 'required' => 'required')) !!}
+	      </div>
+	      <div class="modal-footer" style = 'background:#444;border-top:none;'>
+	        <button type="button" class="hero-shot-btn testimonial-btn" data-dismiss="modal">Close</button>
+	        {!! Form::submit('Submit', array('class' => 'hero-shot-btn testimonial-btn')) !!}
+	      </div>
+	      {!! Form::close() !!}
+	    </div>
+	  </div>
+	</div>
+	<!-- End Testimonial Modal -->
 
 	<!-- Logos Section -->
 	@include('includes.logos')
@@ -94,6 +125,8 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
+
+			$( ".alert" ).delay(6000).fadeOut();
 
 			
 			$(window).scroll(function(){

@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'no-reply@cbmreno.ca', 'name' => 'CBM Renovations Quote'],
+    'from' => ['address' => 'no-reply@cbmreno.ca', 'name' => 'CBM Renovations Website'],
 
     /*
     |--------------------------------------------------------------------------

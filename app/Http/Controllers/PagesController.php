@@ -68,6 +68,30 @@ class PagesController extends BaseController
     	return view('pages.testimonials');
     }
 
+    // Function used to sent testimonials for approval
+    public function sendtestimonial()
+    {
+        $posted_data = Input::all();
+
+        $email_data = array(
+            'name'      => $posted_data['name'],
+            'location'     => $posted_data['location'],
+            'testimonial_text'   => $posted_data['testimonial_text'],
+            'recipient' => "Manny"
+
+        );
+
+        Mail::send('emails.testimonial', $email_data, function($message) use ($posted_data)
+        {
+          $message->to('daniel.arias@chefsplate.com', 'CBM Renovations')
+                  ->subject('Testimonial submitted by '. $posted_data['name']);
+          $message->to('arias531@hotmail.com', 'CBM Renovations')
+                  ->subject('Testimonial submitted by '. $posted_data['name']);
+        });
+
+        return redirect('/testimonials')->with('testimonial-sent', true)->with('message','Your Message has been sent for Approval!');
+    }
+
     public function ourservices()
     {
         return view('pages.ourservices');

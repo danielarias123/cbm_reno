@@ -3,16 +3,6 @@
 @section('content')
 	<section id = "contact-us">
 		<div class = 'container'>
-			<div class = "row">
-				<div class = 'col-sm-12'>
-					<h1 class = "pages-header">Contact Us</h1>
-				</div>
-			</div>
-		</div>
-		<div id = "map-container">
-			<div id="map"></div>
-		</div>
-		<div class = "container">
 			@if(Session::has('form-success'))
 				@if(Session::get('form-success') == true)
 					<div class="alert alert-success">
@@ -25,7 +15,16 @@
 					</div>
 				@endif
 			@endif
-
+			<div class = "row">
+				<div class = 'col-sm-12'>
+					<h1 class = "pages-header">Contact Us</h1>
+				</div>
+			</div>
+		</div>
+		<div id = "map-container">
+			<div id="map"></div>
+		</div>
+		<div class = "container">
 			<div class = 'row'>
 				<div class = "col-sm-6">
 					<div class="contact-us-section">

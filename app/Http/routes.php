@@ -22,6 +22,8 @@ Route::post('/contact-us/sendemail', 'PagesController@sendemail');
 
 Route::get('/testimonials', 'PagesController@testimonials');
 
+Route::post('/contact-us/sendtestimonial', 'PagesController@sendtestimonial');
+
 Route::get('/ourservices', 'PagesController@ourservices');
 
 Route::get('/ourstory', 'PagesController@ourstory');

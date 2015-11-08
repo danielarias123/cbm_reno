@@ -62,6 +62,15 @@ h3{
 	color: #ffffff;
 }
 
+.active-link:after{
+	width: 100% !important;
+	background: #999 !important;
+	content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+}
+
 
 #main-navbar li{
 	float: left;
@@ -76,9 +85,19 @@ h3{
 
 }
 
-#main-navbar li:hover{
-	background: rgba(204, 204, 204, 0.2);
-	color: #fff;
+#main-navbar li:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+#main-navbar li:hover:after{
+	width: 100%;
+	background: #999;
 }
 
 #phone-section{
@@ -294,7 +313,7 @@ h3{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	width: 90%;
+	width: 80%;
 	margin: 30px auto;
 
 	-webkit-transition: all 500ms;
@@ -304,8 +323,20 @@ h3{
 	
 }
 
+.specialize-bg:hover{
+	opacity: 0.6;
+}
+
+.specialize-bg:hover .specialize-text{
+	font-size: 65px !important;
+}
+
 .specialize-text{
 	padding: 155px 0;
+	-webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
 }
 
 .what-we-do-text{
@@ -494,6 +525,21 @@ h3{
 	color: #888;
 	font-size: 18px;
 
+}
+
+.testimonial-modal-dialog{
+	margin-top: 140px;
+}
+
+.testimonial-modal-dialog h4{
+	font-weight: 300;
+}
+
+.testimonial-btn{
+	padding: 5px 10px;
+	font-size: 18px;
+	margin-top: 0;
+	margin-right: 10px;
 }
 
 .alert{

@@ -77,21 +77,27 @@
 							<a href = '/ourservices'><span id = "view-services-text">VIEW ALL OUR SERVICES</span></a><br/>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.
 						</div>
 						<div class = "col-sm-6">
-							<div class = "specialize-bg" style="background-image: url(/images/bathroom-frontpage.jpg);">
-								<h2 class = "specialize-text">Bathrooms</h2>
-							</div>
+							<a href='/ourservices#bathroom-service'>
+								<div class = "specialize-bg" style="background-image: url(/images/bathroom-frontpage.jpg);">
+									<h2 class = "specialize-text">Bathrooms</h2>
+								</div>
+							</a>
 						</div>
 					</div>
 					<div class = "row specialize-row">
 						<div class = "col-sm-6">
-							<div class = "specialize-bg" style="background-image: url(/images/kitchen-frontpage.jpg);">
-								<h2 class = "specialize-text">Kitchens</h2>
-							</div>
+							<a href='/ourservices#kitchen-service'>
+								<div class = "specialize-bg" style="background-image: url(/images/kitchen-frontpage.jpg);">
+									<h2 class = "specialize-text">Kitchens</h2>
+								</div>
+							</a>
 						</div>
 						<div class = "col-sm-6">
-							<div class = "specialize-bg" style="background-image: url(/images/basement-frontpage.jpg);">
-								<h2 class = "specialize-text">Basements</h2>
-							</div>
+							<a href='/ourservices#basement-service'>
+								<div class = "specialize-bg" style="background-image: url(/images/basement-frontpage.jpg);">
+									<h2 class = "specialize-text">Basements</h2>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -156,7 +162,7 @@
 				</div>
 			</section>
 			<!-- End Get Quote Section -->
-			
+
 			<!-- Logos Section -->
 			@include('includes.logos')
 			<!-- End Logos Section -->
