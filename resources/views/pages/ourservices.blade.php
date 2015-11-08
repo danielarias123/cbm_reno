@@ -105,7 +105,7 @@
 
 		<!-- Get Quote Section -->
 		<section id = "get-quote-section" class = 'services-get-quote'>
-				<h1>Get Started</h1>
+				<h1>Get Started Now</h1>
 				<a href = "/contact-us"><button class = "hero-shot-btn">Request A Quote</button></a>
 		</section>
 		<!-- End Get Quote Section -->
