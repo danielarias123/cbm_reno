@@ -670,14 +670,18 @@ h3{
 }
 
 .our-process-container{
-	background: #999;
+	background: #888;
 	color: #333;
 	font-size: 20px;
 	width: 90%;
 	margin: 50px auto 0px auto;
-	padding: 0px 20px 30px 20px;
+	padding: 0px 20px 10px 20px;
 	font-weight: 400;
 	text-align: center;
+}
+
+.our-process-container p{
+	font-weight: 300;
 }
 
 .our-process-container h3{
@@ -688,7 +692,7 @@ h3{
 	display: inline-block;
 	font-size: 30px;
 	padding: 12px 25px;
-	color: #999;
+	color: #fff;
 	background: #333;
 	margin: 10px;
 	border-radius: 40px;

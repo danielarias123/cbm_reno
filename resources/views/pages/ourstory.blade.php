@@ -62,6 +62,7 @@
 					<div class="row">
 						<div class = "col-sm-12">
 							<h3>Our Process</h3>
+							<p>Through our structured process, our expierenced team makes realizing your dream as easy as 3 steps</p>
 						</div>
 					</div>
 					<div class="row">
