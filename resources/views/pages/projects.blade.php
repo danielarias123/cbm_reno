@@ -4,7 +4,7 @@
 
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-mixpanel.track("Projects Page View");
+//mixpanel.track("Projects Page View");
 </script>
 
 <section id = 'gallery'>

@@ -4,7 +4,7 @@
 
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-mixpanel.track("Testimonials Page View");
+//mixpanel.track("Testimonials Page View");
 </script>
 
 	<!-- Testimonials Section -->

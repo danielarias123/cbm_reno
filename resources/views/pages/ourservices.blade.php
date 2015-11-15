@@ -4,7 +4,7 @@
 
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-mixpanel.track("Our Services Page View");
+//mixpanel.track("Our Services Page View");
 </script>
 
 <section id = 'our-services' class = "webpage-section">

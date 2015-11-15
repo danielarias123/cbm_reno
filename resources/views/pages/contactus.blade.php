@@ -4,7 +4,7 @@
 
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-mixpanel.track("Contact Us Page View");
+//mixpanel.track("Contact Us Page View");
 </script>
 
 	<section id = "contact-us" class = "webpage-section">

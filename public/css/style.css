@@ -652,6 +652,49 @@ h3{
 	font-size:22px;
 }
 
+.what-we-believe-col{
+	margin: 30px 0px;
+}
+
+.what-we-believe-img{
+	width: 50%;
+	display: block;
+	margin: 30px auto 10px auto;
+}
+
+.what-we-believe-col p{
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	text-align: center;
+}
+
+.our-process-container{
+	background: #999;
+	color: #333;
+	font-size: 20px;
+	width: 90%;
+	margin: 50px auto 0px auto;
+	padding: 0px 20px 30px 20px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.our-process-container h3{
+	font-weight: 400;
+}
+
+.step-num{
+	display: inline-block;
+	font-size: 30px;
+	padding: 12px 25px;
+	color: #999;
+	background: #333;
+	margin: 10px;
+	border-radius: 40px;
+
+}
+
 
 
 

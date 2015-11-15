@@ -3,7 +3,7 @@
 @section('content')
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-mixpanel.track("Home Page View");
+//mixpanel.track("Home Page View");
 </script>
 
 <section id = "home">
