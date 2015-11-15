@@ -399,7 +399,7 @@ h3{
 	font-size: 60px;
 }
 
-#contact-us, #testimonials, #our-services{
+#contact-us, #testimonials, #our-services, #our-story{
 	margin: 80px 0px 40px 0px;
 }
 
@@ -497,10 +497,33 @@ h3{
 	margin-top: 30px;
 	
 }
-
-.book-consultation-link a{
+.book-consultation-link span, .see-testimonials-link span{
 	color: #888 !important;
 	text-decoration: none;
+	-webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
+ 	vertical-align: text-top;
+}
+
+.see-testimonials-link{
+	font-size: 23px;
+	font-weight: 300;
+	margin-top: 30px;
+}
+
+.book-consultation-link a, .see-testimonials-link a{
+	color: #888 !important;
+	text-decoration: none;
+	-webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
+}
+
+.see-testimonials-link a:hover, .book-consultation-link a:hover, .book-consultation-link a:hover span, .see-testimonials-link a:hover span{
+	color: #fff !important;
 }
 
 .testimonial-row{
@@ -603,6 +626,30 @@ h3{
 .services-get-quote{
 	padding-bottom: 0px !important;
 	margin-top: 50px;
+}
+
+.btn-smaller{
+	color: #fff;
+	padding: 5px 10px;
+	font-size: 20px;
+	display: block;
+	margin: 20px auto; 
+}
+
+.webpage-section a{
+	text-decoration: none;
+}
+
+
+.about-us-summary{
+	margin: 30px 0px;
+	text-align: center;
+	border: 1px solid #fff;
+	padding: 30px;
+}
+
+.about-us-summary p{
+	font-size:22px;
 }
 
 

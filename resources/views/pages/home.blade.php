@@ -1,6 +1,11 @@
 @extends('layouts.layout')
 
 @section('content')
+<!-- Mixpanel Tracking -->
+<script type="text/javascript">
+mixpanel.track("Home Page View");
+</script>
+
 <section id = "home">
     <div class="parallax">
 
@@ -23,8 +28,9 @@
 
 	  		<!-- Hero Shot Text Section -->
 	    	<section id = "hero-title">
+	    		<!-- love where you live -->
 	    		Bring your <span>dream</span> home closer<br />to <span>reality</span><br/>
-	    		<a href = "/contact-us"><button class = "hero-shot-btn">Get a Free Quote</button></a>
+	    		<a href = "/contact-us" id = "hero-quote-btn"><button class = "hero-shot-btn">Get a Free Quote</button></a>
 	    	</section>
 	    	<!-- End Hero Text Shot Section -->
 
@@ -32,7 +38,9 @@
 	    	<section id = "what-we-do-section">
 				<div class = "container">
 					<div class = "row">
-						<h1>What We Do</h1>
+						<div class = "col-sm-12">
+							<h1>What We Do</h1>
+						</div>
 					</div>
 					<div class = "row">
 						<div class = "col-sm-4">
@@ -158,7 +166,7 @@
 			<section id = "get-quote-section">
 				<div class = "container">
 					<h1>Contact our renovation experts today to convert ideas into cozy homes.</h1>
-					<a href = "/contact-us"><button class = "hero-shot-btn">Book Your Free Consultation</button></a>
+					<a href = "/contact-us" id="home-bottom-quote-btn"><button class = "hero-shot-btn">Book Your Free Consultation</button></a>
 				</div>
 			</section>
 			<!-- End Get Quote Section -->
@@ -204,6 +212,21 @@
 		    		'color':'#fff'
 		    	});
 		    }
+		});
+
+		// Mixpanel Tracking
+		$("#hero-quote-btn").click(function(){
+			// Send mixpanel event
+			mixpanel.track("Get Quote", {
+				"Source": "Hero Shot"
+			});
+		});
+
+		$("#home-bottom-quote-btn").click(function(){
+			// Send mixpanel event
+			mixpanel.track("Get Quote", {
+				"Source": "Bottom Homepage"
+			});
 		});
 	});
 </script>

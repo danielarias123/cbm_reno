@@ -1,6 +1,13 @@
 @extends('layouts.layout')
 
-<section id = 'our-services'>
+@section('content')
+
+<!-- Mixpanel Tracking -->
+<script type="text/javascript">
+mixpanel.track("Our Services Page View");
+</script>
+
+<section id = 'our-services' class = "webpage-section">
 	<div class = "container">
 		<div class = "row">
 			<div class = 'col-sm-12'>
@@ -102,17 +109,19 @@
 			</div>
 		</div>
 		<!-- End Kitchens -->
-
-		<!-- Get Quote Section -->
-		<section id = "get-quote-section" class = 'services-get-quote'>
-				<h1>Get Started Now</h1>
-				<a href = "/contact-us"><button class = "hero-shot-btn">Request A Quote</button></a>
-		</section>
-		<!-- End Get Quote Section -->
+		<div class="row">
+			<div class = "col-sm-12">
+				<!-- Get Quote Section -->
+				<section id = "get-quote-section" class = 'services-get-quote'>
+						<h1>Get Started Now</h1>
+						<a href = "/contact-us" id="our-services-quote-btn"><button class = "hero-shot-btn">Request A Quote</button></a>
+				</section>
+				<!-- End Get Quote Section -->
+			</div>
+		</div>
 
 	</div>
 </section>
-@section('content')
 
 <!-- Logos Section -->
 @include('includes.logos')
@@ -146,28 +155,12 @@
 		  $('#kitchen-service .read-more').html('READ MORE<br/><span class="glyphicon glyphicon-chevron-down"></span>');
 		});
 
-		
-		$(window).scroll(function(){
-		    if($("#our-services").offset().top < $(document).scrollTop()){
-
-		    	$( "#nav-header").css({ 
-		    		'border-bottom':'1px solid #666',
-		    		'color':'#b5b5b5',
-		    		'background': 'rgba(51,51,51,'+Math.abs($("#our-services").offset().top/80)+')'
-		    	});
-
-		    	$("#main-navbar a").css({
-		    		'color':'#b5b5b5'
-		    	});
-		    }else{
-		    	$( "#nav-header").css({'background': 'rgba(51,51,51,0.2)', 
-		    		'border-bottom':'none',
-		    		'color':"#fff"});
-
-		    	$("#main-navbar a").css({
-		    		'color':'#fff'
-		    	});
-		    }
+		// Mixpanel Tracking
+		$("#tour-services-quote-btn").click(function(){
+			// Send mixpanel event
+			mixpanel.track("Get Quote", {
+				"Source": "Our Services Page"
+			});
 		});
 	});
 </script>

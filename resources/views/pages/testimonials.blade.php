@@ -2,8 +2,13 @@
 
 @section('content')
 
+<!-- Mixpanel Tracking -->
+<script type="text/javascript">
+mixpanel.track("Testimonials Page View");
+</script>
+
 	<!-- Testimonials Section -->
-	<section id = "testimonials">
+	<section id = "testimonials" class = "webpage-section">
 		<div class = "container">
 			@if(Session::has('testimonial-sent'))
 					<div class="alert alert-success">
@@ -85,7 +90,7 @@
 				<div class = 'col-sm-12'>
 					<button type='button' class = "hero-shot-btn" data-toggle="modal" data-target="#testimonialModal">Submit Your Own</button>
 
-					<div class = 'book-consultation-link'><a href = "/contact-us"><span class="glyphicon glyphicon-comment" style = 'vertical-align:text-top; color:#888;'></span>&nbsp;&nbsp;Book Your Free Consultation</a></div>
+					<div class = 'book-consultation-link'><a href = "/contact-us" id = "testimonials-quote-btn"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Book Your Free Consultation</a></div>
 				</div>
 			</div>
 		</div>
@@ -128,29 +133,14 @@
 
 			$( ".alert" ).delay(6000).fadeOut();
 
-			
-			$(window).scroll(function(){
-			    if($("#testimonials").offset().top < $(document).scrollTop()){
-
-			    	$( "#nav-header").css({ 
-			    		'border-bottom':'1px solid #666',
-			    		'color':'#b5b5b5',
-			    		'background': 'rgba(51,51,51,'+Math.abs($("#testimonials").offset().top/80)+')'
-			    	});
-
-			    	$("#main-navbar a").css({
-			    		'color':'#b5b5b5'
-			    	});
-			    }else{
-			    	$( "#nav-header").css({'background': 'rgba(51,51,51,0.2)', 
-			    		'border-bottom':'none',
-			    		'color':"#fff"});
-
-			    	$("#main-navbar a").css({
-			    		'color':'#fff'
-			    	});
-			    }
+			// Mixpanel Tracking
+			$("#testimonials-quote-btn").click(function(){
+				// Send mixpanel event
+				mixpanel.track("Get Quote", {
+					"Source": "Testimonials Page"
+				});
 			});
+
 		});
 	</script>
 @stop
