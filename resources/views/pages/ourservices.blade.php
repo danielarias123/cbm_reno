@@ -32,7 +32,7 @@
 			<a role="button" data-toggle="collapse" href="#collapseBasement" aria-expanded="false" aria-controls="collapseBasement">
 				<div class = 'row'>
 					<div class = 'col-sm-8'>
-						<div class = 'our-services-banner' style = "background-image:url(/images/basement-1.jpg);"></div>
+						<div class = 'our-services-banner' style = "background-image:url(/images/basementstock-1.jpg);"></div>
 					</div>
 					<div class = 'col-sm-4'>
 						<p>
