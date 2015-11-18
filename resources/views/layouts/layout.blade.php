@@ -21,6 +21,7 @@ mixpanel.init("a00df3c695e5cc3b99b810766c4561b2");
 		</script>
 		<!-- end Mixpanel -->
 		
+		@yield('header')
 
 	</head>
 	<body>

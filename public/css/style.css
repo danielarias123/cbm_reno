@@ -395,11 +395,16 @@ h3{
 	margin-top: 10px;
 }
 
+.mixpanel-logo{
+	position: absolute;
+	right: 10px;
+}
+
 .pages-header{
 	font-size: 60px;
 }
 
-#contact-us, #testimonials, #our-services, #our-story{
+.webpage-section{
 	margin: 80px 0px 40px 0px;
 }
 
@@ -640,12 +645,27 @@ h3{
 	text-decoration: none;
 }
 
+.about-us-bg{
+	background: url() no-repeat center 33%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 150px 0px;
+	margin: 30px 0px;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	opacity: 0.8;
+	background-position-y:-480px; 
+}
+
 
 .about-us-summary{
-	margin: 30px 0px;
 	text-align: center;
-	border: 1px solid #fff;
-	padding: 30px;
+	padding: 20px 40px;
+	background: #333;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .about-us-summary p{
@@ -673,30 +693,163 @@ h3{
 	background: #888;
 	color: #333;
 	font-size: 20px;
-	width: 90%;
 	margin: 50px auto 0px auto;
-	padding: 0px 20px 10px 20px;
+	padding: 0px 30px 50px 30px;
 	font-weight: 400;
 	text-align: center;
+	border-radius: 3px;
 }
 
 .our-process-container p{
-	font-weight: 300;
+	font-size: 18px;
 }
 
 .our-process-container h3{
 	font-weight: 400;
 }
+.process-step-cont{
+	width: 25%;
+	float: left;
+}
+
+.process-arrow-cont{
+	width: 12.5%;
+	float: left;
+}
+
+.process-step{
+	border: 2px solid #333;
+	padding: 10px;
+	display: inline-block;
+	width: 100%;
+	min-height: 176px;
+	margin-top: 20px;
+}
+.process-step-arrow{
+	display: inline-block;
+    height: 176px;
+    vertical-align: top;
+    padding-top: 78px;
+    font-size: 45px;
+}
 
 .step-num{
 	display: inline-block;
-	font-size: 30px;
-	padding: 12px 25px;
+	font-size: 20px;
+	padding: 10px 19px;
 	color: #fff;
 	background: #333;
-	margin: 10px;
+	margin-right: 10px;
 	border-radius: 40px;
 
+}
+
+.step-desc{
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.project-image{
+	padding: 10px;
+}
+
+.slick-active:focus{
+	outline: 0px;
+}
+
+.project-image img{
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+
+.slick-arrow{
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    padding: 0;
+    cursor: pointer;
+    color: #555;
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-transition: all 500ms;
+  	-moz-transition: all 500ms;
+  	-o-transition: all 500ms;
+ 	transition: all 500ms;
+}
+
+.slick-arrow:hover{
+	color: #999;
+}
+
+.slick-prev {
+    left: -25px;
+}
+
+.slick-next {
+    right: -30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -45px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    margin: 0 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    padding: 4px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #555;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.slick-dots li.slick-active button{
+	background: #999;
+}
+
+.project-row-header{
+	text-align: left;
+	margin-left: 20px;
+	font-size: 35px;
+}
+
+.project-category-row{
+	border-top: 1px solid #555;
+	margin-top: 20px;
+}
+
+.image-modal{
+	margin-top: 70px;
+}
+
+.chosen-image{
+	width: 100%;
 }
 
 

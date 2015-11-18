@@ -14,17 +14,17 @@
 				<h1 class = "pages-header">Our Story</h1>
 			</div>
 		</div>
-		<div class = "row">
-			<div class = 'col-sm-12'>
-				<div class = "about-us-summary">
-					<p class = "testimonial-text" >We are a residential and commercial renovations company servicing the GTA for over 20 years.<br/>
-						At CBM Renovations, we take pride in our work and care about your project just as much as you do.
-					</p>
-					<div class = "see-testimonials-link"><a href = "/testimonials"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;See what our clients have to say</a></div>
-				</div>
-			</div>
+	</div>
+	<div class = "about-us-bg" style = "background-image:url(/images/about-us-bg.jpg);">
+		<div class = "about-us-summary" >
+			<p class = "testimonial-text" >We are a residential and commercial renovations company servicing the GTA for over 20 years.<br/>
+				At CBM Renovations, we take pride in our work and care about your project just as much as you do.
+			</p>
+			<div class = "see-testimonials-link"><a href = "/testimonials"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;See what our clients have to say</a></div>
 		</div>
+	</div>
 		<!-- What we Believe in Section -->
+	<div class="container">
 		<div class = "row">
 			<div class = "col-sm-12">
 				<h1>What We Believe In</h1>
@@ -65,20 +65,29 @@
 							<p>Through our structured process, our expierenced team makes realizing your dream as easy as 3 steps</p>
 						</div>
 					</div>
-					<div class="row">
-						<div class='col-sm-4'>
+					<div class="row" style = "width:95%; margin: 0 auto;">
+						<div  class = "process-step-cont">
 							<div class = "process-step">
-								<div class="step-num">1</div>Consultation&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span>
+								<div class="step-num">1</div><br/>Consultation
+								<div class = "step-desc">We will come by and provide a free no-obligation quote for your project</div>
 							</div>
 						</div>
-						<div class='col-sm-4'>
+						<div class = "process-arrow-cont">
+							<div class ="process-step-arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
+						</div>
+						<div  class = "process-step-cont">
 							<div class = "process-step">
-								<div class="step-num">2</div>Planning &amp; Design&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span>
+								<div class="step-num">2</div><br/>Planning &amp; Design
+								<div class = "step-desc">Closely working with you, we build a design and timeline to suit your needs</div>
 							</div>
 						</div>
-						<div class='col-sm-4'>
-							<div class = "process-step">
-								<div class="step-num">3</div>Project Realization
+						<div class = "process-arrow-cont">
+							<div class ="process-step-arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
+						</div>
+						<div class = "process-step-cont">
+							<div class = "process-step"> 
+								<div class="step-num">3</div><br/>Project Realization
+								<div class = "step-desc">Your project is completed on time and within budget</div>
 							</div>
 						</div>
 					</div>
