@@ -50,7 +50,7 @@
 				<div class = "services-info">
 					Besides being a place used as a storage facility, basements offer a fantastic ground for a creative and rewarding remodeling project. Whether you are looking for a new bedroom, bar, theater, gym, or office, the solution might be right under your feet.<br/><br/>
 					At CBM, we guide you through every step of the way... list steps.
-				</div>  
+				</div>
 			</div>
 		</div>
 		<!-- End Basements -->
@@ -77,7 +77,7 @@
 			<div class="collapse" id="collapseBathroom">
 				<div class = "services-info">
 					Besides being a place used as a storage facility, basement offers a fantastic ground for creative and rewarding remodeling project. Whether you are looking for a new bedroom, bar, theater, gym, or office, the solution might be right under your feet.
-				</div> 
+				</div>
 			</div>
 		</div>
 		<!-- End Bathrooms -->
@@ -105,7 +105,7 @@
 				<div class = "services-info">
 					Besides being a place used as a storage facility, basements offer a fantastic ground for a creative and rewarding remodeling project. Whether you are looking for a new bedroom, bar, theater, gym, or office, the solution might be right under your feet.<br/><br/>
 					At CBM, we guide you through every step of the way... list steps.
-				</div>  
+				</div>
 			</div>
 		</div>
 		<!-- End Kitchens -->
@@ -156,7 +156,7 @@
 		});
 
 		// Mixpanel Tracking
-		$("#tour-services-quote-btn").click(function(){
+		$("#our-services-quote-btn").click(function(){
 			// Send mixpanel event
 			mixpanel.track("Get Quote", {
 				"Source": "Our Services Page"

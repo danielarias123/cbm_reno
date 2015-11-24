@@ -186,7 +186,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		
+
 		$(".parallax").scroll(function(){
 
 			// Make the hero shot text fade away on scroll
@@ -194,7 +194,7 @@
 
 		    if($("#what-we-do-section").offset().top < 0){
 
-		    	$( "#nav-header").css({ 
+		    	$( "#nav-header").css({
 		    		'border-bottom':'1px solid #666',
 		    		'color':'#b5b5b5',
 		    		'background': 'rgba(51,51,51,'+Math.abs($("#what-we-do-section").offset().top/20)+')'
@@ -204,7 +204,7 @@
 		    		'color':'#b5b5b5'
 		    	});
 		    }else{
-		    	$( "#nav-header").css({'background': 'rgba(51,51,51,0.2)', 
+		    	$( "#nav-header").css({'background': 'rgba(51,51,51,0.2)',
 		    		'border-bottom':'none',
 		    		'color':"#fff"});
 
