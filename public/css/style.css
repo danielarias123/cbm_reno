@@ -194,6 +194,7 @@ h3{
 #hero-title{
 	font-size: 60px;
 	text-align: center;
+    line-height: 110%;
 	color: #ffffff;
 	font-weight: 100;
 	padding: 27vh 0vh 20vh 0vh;
@@ -852,4 +853,98 @@ h3{
 .chosen-image{
 	width: 100%;
   max-height: 450px;
+}
+
+@media screen and (max-width: 479px){
+    #header-logo{
+        font-size: 17px;
+        margin-top: 16px;
+    }
+
+    .navbar-toggle{
+        font-size: 30px;
+    }
+
+    .dropdown-menu{
+        background: #333;
+        right: 0;
+        left: inherit;
+        top: 50px;
+        width: 70%;
+        padding: 10px;
+    }
+
+    .dropdown-menu li{
+        padding: 10px;
+        font-size: 20px;
+        text-align: right;
+    }
+
+    #hero-title{
+        padding: 20vh 0vh;
+        font-size: 50px;
+    }
+
+    .what-we-do-col{
+        margin: 50px 0px;
+    }
+
+    #what-we-do-section{
+        padding-bottom: 0px;
+    }
+
+    #specialize-section h1{
+        padding-top: 30px;
+    }
+
+    .specialize-bg{
+        width: 100%;
+    }
+
+    .specialize-text{
+        padding: 100px 0px;
+        font-size: 45px;
+    }
+
+    #specialize-section{
+        padding-bottom: 30px;
+    }
+
+    #trusted-renovators-section{
+        display: none;
+    }
+
+    #recent-projects-section{
+        padding-bottom: 30px;
+    }
+
+    #get-quote-section {
+        padding: 0px 5px;
+        font-size: 45px;
+    }
+
+    #get-quote-section h1{
+        font-size: 35px;
+    }
+
+    .hero-shot-btn{
+        padding: 5px 10px;
+        font-size: 30px;
+    }
+
+    #logos-section{
+        padding: 50px 10px;
+    }
+
+    .logo-image{
+        max-width: 135px;
+        max-height: 43px;
+        margin-top: 20px;
+    }
+
+    .mixpanel-logo{
+        display: none;
+    }
+
+
 }
