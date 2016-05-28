@@ -1,5 +1,10 @@
 @extends('layouts.layout')
 
+@section('title', 'Mississauga, Toronto, Burlington &amp; Oakville Completed Home Renovation Projects | CBM Renovations')
+@section('description', 'Browse through our gallery of completed home renovation projects. We deal in kitchen renovations, home additions, bathroom renovation &amp; more.')
+@section('url', 'http://www.cbmreno.ca/projects')
+@section('type', 'article')
+
 @section('header')
 
 {!!HTML::script('js/slick.min.js')!!}
@@ -11,7 +16,7 @@
 
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-//mixpanel.track("Projects Page View");
+mixpanel.track("Projects Page View");
 </script>
 
 
@@ -24,7 +29,7 @@
 		</div>
 
 		<!-- Basement Images -->
-		<div class = "row project-category-row">
+		<div class = "row project-category-row" id="basement-images">
 			<div class = 'col-sm-12'>
 				<h3 class = "project-row-header">Basements</h3>
 			</div>
@@ -58,7 +63,7 @@
 		<!-- End Basement Images -->
 
 		<!-- Kitchen Images -->
-		<div class = "row project-category-row">
+		<div class = "row project-category-row" id="kitchen-images">
 			<div class = 'col-sm-12'>
 				<h3 class = "project-row-header">Kitchens</h3>
 			</div>
@@ -95,7 +100,7 @@
 		<!-- End Kitchen Images -->
 
 		<!-- Bathroom Images -->
-		<div class = "row project-category-row">
+		<div class = "row project-category-row" id="bathroom-images">
 			<div class = 'col-sm-12'>
 				<h3 class = "project-row-header">Bathrooms</h3>
 			</div>
@@ -114,13 +119,7 @@
 				<div class = "project-image" id = "bathroom-5" data-toggle="modal" data-target="#imageModal" data-image="bathroom-5.png"><img data-lazy= "/images/bathroom-5.png"/></div>
 			</div>
 			<div>
-				<div class = "project-image" id = "bathroom-6" data-toggle="modal" data-target="#imageModal" data-image="bathroom-6.png"><img data-lazy= "/images/bathroom-6.png"/></div>
-			</div>
-			<div>
 				<div class = "project-image" id = "bathroom-7" data-toggle="modal" data-target="#imageModal" data-image="bathroom-4.png"><img data-lazy= "/images/bathroom-4.png"/></div>
-			</div>
-			<div>
-				<div class = "project-image" id = "bathroom-8" data-toggle="modal" data-target="#imageModal" data-image="bathroom-8.png"><img data-lazy= "/images/bathroom-8.png"/></div>
 			</div>
 			<div>
 				<div class = "project-image" id = "bathroom-9" data-toggle="modal" data-target="#imageModal" data-image="bathroom-9.png"><img data-lazy= "/images/bathroom-9.png"/></div>
@@ -132,7 +131,7 @@
 		<!-- End Bathroom Images -->
 
 		<!-- Commercial Images -->
-		<div class = "row project-category-row">
+		<div class = "row project-category-row" id="commercial-images">
 			<div class = 'col-sm-12'>
 				<h3 class = "project-row-header">Commercial</h3>
 			</div>
@@ -198,7 +197,7 @@
 				<!-- Get Quote Section -->
 				<section id = "get-quote-section" class = 'services-get-quote' style = "margin-bottom: 40px;">
 						<h1>Love where you Live</h1>
-						<a href = "/contact-us" id="projects-quote-btn"><button class = "hero-shot-btn">Request A Quote</button></a>
+						<a href = "#" id="projects-quote-btn"><button class = "hero-shot-btn">Request A Quote</button></a>
 				</section>
 				<!-- End Get Quote Section -->
 			</div>
@@ -240,7 +239,22 @@
 			dots: true,
 			prevArrow: "<div class='slick-prev'><span class='glyphicon glyphicon-chevron-left'></span></div>",
 			nextArrow: "<div class='slick-next'><span class='glyphicon glyphicon-chevron-right'></span></div>",
-			lazyload: 'ondemand'
+			lazyload: 'ondemand',
+			responsive: [
+				{
+			      breakpoint: 780,
+			      settings: {
+			        slidesToShow: 3
+			      }
+			    },
+
+				{
+			      breakpoint: 480,
+			      settings: {
+			        slidesToShow: 1
+			      }
+			    },
+			]
 
 		});
 
@@ -275,7 +289,11 @@
 		})
 
 		// Mixpanel Tracking
-		$("#projects-quote-btn").click(function(){
+		$("#projects-quote-btn").click(function(e){
+			e.preventDefault();
+            // Show the Contact Modal
+            $('#contactModal').modal();
+
 			// Send mixpanel event
 			mixpanel.track("Get Quote", {
 				"Source": "Projects Page"

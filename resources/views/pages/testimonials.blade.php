@@ -1,10 +1,15 @@
 @extends('layouts.layout')
 
+@section('title', 'Read Our Satisfied Customer&#039;s Testimonials | CBM Renovations')
+@section('description', 'Read our satisfied client&#039;s testimonials &amp; comments about CBM Renovations professional work.')
+@section('url', 'http://www.cbmreno.ca/testimonials')
+@section('type', 'article')
+
 @section('content')
 
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-//mixpanel.track("Testimonials Page View");
+mixpanel.track("Testimonials Page View");
 </script>
 
 	<!-- Testimonials Section -->
@@ -90,7 +95,7 @@
 				<div class = 'col-sm-12'>
 					<button type='button' class = "hero-shot-btn" data-toggle="modal" data-target="#testimonialModal">Submit Your Own</button>
 
-					<div class = 'book-consultation-link'><a href = "/contact-us" id = "testimonials-quote-btn"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Book Your Free Consultation</a></div>
+					<div class = 'book-consultation-link'><a href = "#" id = "testimonials-quote-btn"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Book Your Free Consultation</a></div>
 				</div>
 			</div>
 		</div>
@@ -134,7 +139,11 @@
 			$( ".alert" ).delay(6000).fadeOut();
 
 			// Mixpanel Tracking
-			$("#testimonials-quote-btn").click(function(){
+			$("#testimonials-quote-btn").click(function(e){
+				e.preventDefault();
+	            // Show the Contact Modal
+	            $('#contactModal').modal();
+
 				// Send mixpanel event
 				mixpanel.track("Get Quote", {
 					"Source": "Testimonials Page"

@@ -1,9 +1,16 @@
 @extends('layouts.layout')
 
+@section('title', 'Home Renovation &amp; Remodeling Services Mississauga, Oakville, Toronto, Burlington &amp; Milton')
+@section('description', 'CBM Renovations is leading general contractor having 20 years of experience in home renovation , remodeling &amp; construction serving Mississauga, Oakville, Toronto, Burlington and Milton Areas in Canada.')
+@section('url', 'http://www.cbmreno.ca')
+@section('type', 'website')
+
+
+
 @section('content')
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-//mixpanel.track("Home Page View");
+mixpanel.track("Home Page View");
 </script>
 
 <section id = "home">
@@ -12,11 +19,11 @@
     	<!-- Back Layer (Slow Scroll)-->
 	  	<div class="parallax-layer parallax-layer-back">
 	  		<!-- Hero Shot Image Section -->
-	  		<div id = "hero-shot-bg" style="background-image: url(/images/hero-kitchen.jpg);"></div>
+	  		<div id = "hero-shot-bg" style="background-image: url(/images/room-hero-shot.jpg);"></div>
 	  		<!-- End Hero Shot Image Section -->
 
 	  		<!-- Trusted Renovators Image Section -->
-	  		<div id = "trusted-renovators-bg" style="background-image: url(/images/trusted-renovators-bg.jpg);"></div>
+	  		<div id = "trusted-renovators-bg" style="background-image: url(/images/main-contractors.jpg);" class="hidden-sm"></div>
 	  		<!-- End Trusted Renovators Image Section -->
 
 	  	</div>
@@ -30,7 +37,7 @@
 	    	<section id = "hero-title">
 	    		<!-- love where you live -->
 	    		Bring your <span>dream</span> home closer<br />to <span>reality</span><br/>
-	    		<a href = "/contact-us" id = "hero-quote-btn"><button class = "hero-shot-btn">Get a Free Quote</button></a>
+	    		<a href = "#" id = "hero-quote-btn"><button class = "hero-shot-btn">Get a Free Quote</button></a>
 	    	</section>
 	    	<!-- End Hero Text Shot Section -->
 
@@ -86,8 +93,8 @@
 						</div>
 						<div class = "col-sm-6">
 							<a href='/ourservices#bathroom-service'>
-								<div class = "specialize-bg" style="background-image: url(/images/bathroom-frontpage.jpg);">
-									<h2 class = "specialize-text">Bathrooms</h2>
+								<div class = "specialize-bg" style="background-image: url(/images/main-bathroom.jpg);">
+									<div class = "specialize-text"><h2>Bathrooms</h2></div>
 								</div>
 							</a>
 						</div>
@@ -95,15 +102,15 @@
 					<div class = "row specialize-row">
 						<div class = "col-sm-6">
 							<a href='/ourservices#kitchen-service'>
-								<div class = "specialize-bg" style="background-image: url(/images/kitchen-frontpage.jpg);">
-									<h2 class = "specialize-text">Kitchens</h2>
+								<div class = "specialize-bg" style="background-image: url(/images/main-kitchen.jpg);">
+									<div class = "specialize-text"><h2>Kitchens</h2></div>
 								</div>
 							</a>
 						</div>
 						<div class = "col-sm-6">
 							<a href='/ourservices#basement-service'>
-								<div class = "specialize-bg" style="background-image: url(/images/basement-frontpage.jpg);">
-									<h2 class = "specialize-text">Basements</h2>
+								<div class = "specialize-bg" style="background-image: url(/images/main-basement.jpg);">
+									<div class = "specialize-text"><h2>Basements</h2></div>
 								</div>
 							</a>
 						</div>
@@ -114,7 +121,10 @@
 
 			<!-- Section Trusted Renovators -->
 			<section id = "trusted-renovators-section">
-				<span>Trusted</span> Contractors<br /> in the <span>GTA</span> for over <span>20 years</span><br />
+				<span>Trusted</span> Contractors<br /> in the <span>GTA</span> for over <span>10 years</span><br />
+                <div class="city">
+                    Oakville &middot; Mississauga &middot; Burlington &middot; Milton &middot; Toronto &middot; Hamilton
+                </div>
 				<a href = '/ourstory'><span id = "view-story-text">CHECK OUT OUR STORY</span></a>
 			</section>
 			<!-- End Section Trusted Renovators -->
@@ -133,25 +143,25 @@
 							<div class="carousel-inner" role="listbox">
 							    <div class="item active">
 							    	<div class = "col-sm-4">
-							    		<img src="/images/cbm-gallery-1.jpg" class = "img-responsive recent-project-img">
+							    		<img src="/images/basement-1.png" class = "img-responsive recent-project-img">
 							    	</div>
-							    	<div class = "col-sm-4">
-							    		<img src="/images/cbm-gallery-2.jpg" class = "img-responsive recent-project-img">
+							    	<div class = "col-sm-4 hidden-xs">
+							    		<img src="/images/kitchen-3.png" class = "img-responsive recent-project-img">
 							    	</div>
-							    	<div class = "col-sm-4">
-							    		<img src="/images/cbm-gallery-3.jpg" class = "img-responsive recent-project-img">
+							    	<div class = "col-sm-4 hidden-xs">
+							    		<img src="/images/bathroom-3.png" class = "img-responsive recent-project-img">
 							    	</div>
 							    </div>
 
 							    <div class="item">
 							      	<div class = "col-sm-4">
-							    		<img src="/images/cbm-gallery-2.jpg" class = "img-responsive recent-project-img">
+							    		<img src="/images/basement-3.png" class = "img-responsive recent-project-img">
 							    	</div>
-							    	<div class = "col-sm-4">
-							    		<img src="/images/cbm-gallery-1.jpg" class = "img-responsive recent-project-img">
+							    	<div class = "col-sm-4 hidden-xs">
+							    		<img src="/images/kitchen-1.png" class = "img-responsive recent-project-img">
 							    	</div>
-							    	<div class = "col-sm-4">
-							    		<img src="/images/cbm-gallery-3.jpg" class = "img-responsive recent-project-img">
+							    	<div class = "col-sm-4 hidden-xs">
+							    		<img src="/images/basement-7.png" class = "img-responsive recent-project-img">
 							    	</div>
 							    </div>
 							</div>
@@ -166,7 +176,7 @@
 			<section id = "get-quote-section">
 				<div class = "container">
 					<h1>Contact our renovation experts today to convert ideas into cozy homes.</h1>
-					<a href = "/contact-us" id="home-bottom-quote-btn"><button class = "hero-shot-btn">Book Your Free Consultation</button></a>
+					<a href = "#" id="home-bottom-quote-btn"><button class = "hero-shot-btn">Book Your Free Consultation</button></a>
 				</div>
 			</section>
 			<!-- End Get Quote Section -->
@@ -215,14 +225,21 @@
 		});
 
 		// Mixpanel Tracking
-		$("#hero-quote-btn").click(function(){
+		$("#hero-quote-btn").click(function(e){
+            e.preventDefault();
+            // Show the Contact Modal
+            $('#contactModal').modal();
+
 			// Send mixpanel event
 			mixpanel.track("Get Quote", {
 				"Source": "Hero Shot"
 			});
 		});
 
-		$("#home-bottom-quote-btn").click(function(){
+		$("#home-bottom-quote-btn").click(function(e){
+            e.preventDefault();
+            // Show the Contact Modal
+            $('#contactModal').modal();
 			// Send mixpanel event
 			mixpanel.track("Get Quote", {
 				"Source": "Bottom Homepage"

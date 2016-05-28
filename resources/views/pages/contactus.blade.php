@@ -1,10 +1,15 @@
 @extends('layouts.layout')
 
+@section('title', 'Contact Expert Home Renovation Contractors Mississauga, Toronto, Burlington &amp; Oakville | CBM Renovations')
+@section('description', 'Get in Touch with Our experts for our services on Home renovation. We undertake kitchen renovations, home additions, bathroom renovations &amp; more.')
+@section('url', 'http://www.cbmreno.ca/contact-us')
+@section('type', 'article')
+
 @section('content')
 
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-//mixpanel.track("Contact Us Page View");
+mixpanel.track("Contact Us Page View");
 </script>
 
 	<section id = "contact-us" class = "webpage-section">
@@ -13,6 +18,9 @@
 				@if(Session::get('form-success') == true)
 					<div class="alert alert-success">
 					  {!! Session::get('message')!!}
+					  <script type="text/javascript">
+					  	mixpanel.track("Submit Quote Request");
+					  </script>
 					</div>
 				@endif
 				@if(Session::get('form-success') == false)
@@ -40,7 +48,7 @@
 						<p><span class="glyphicon glyphicon-earphone" style = "vertical-align: text-top; color:#888;" aria-hidden="true"></span>&nbsp;&nbsp;<a href ="tel:647-785-7125">647 785 7125</a><br/>
 							<span class="glyphicon glyphicon-envelope" style = "vertical-align: text-top; color:#888;" aria-hidden="true"></span>&nbsp;&nbsp;<a href="mailto:info@cbmreno.ca">info@cbmreno.ca</a>
 						</p>
-	
+
 					</div>
 				</div>
 				<div class = "col-sm-6">
@@ -82,10 +90,11 @@
 		    center: {lat: 43.428504, lng: -79.70},
 		    zoom: 9,
 		    scrollwheel: false,
-		    disableDefaultUI: true
+		    disableDefaultUI: true,
+			draggable: false,
 		  });
 		  // Style the Map
-		var dark_style = 
+		var dark_style =
 			[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{
          featureType: "road",
          elementType: "labels",
@@ -104,8 +113,8 @@
 			// Mixpanel Tracking
 			$("#submit-quote-btn").click(function(){
 				mixpanel.track("Submit Quote Request");
-			});	
-			
+			});
+
 		});
 	</script>
 

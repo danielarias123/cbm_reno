@@ -36,7 +36,7 @@ h3{
 
 #nav-header{
 	height: 70px;
-	background: rgba(51,51,51,0.2);
+	background: rgba(51,51,51,0.25);
 	color:#ffffff;
 	position: fixed;
 	font-weight: 200;
@@ -107,6 +107,28 @@ h3{
 	color: #fff !important;
 }
 
+.navbar-toggle{
+    font-size: 30px;
+    z-index: 99999;
+    padding: 5px 10px;
+
+}
+
+#main-menu-dropdown{
+    background: #333;
+    right: 0;
+    left: inherit;
+    top: 50px;
+    width: 70%;
+    padding: 10px;
+}
+
+#main-menu-dropdown li{
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+}
+
 
 #site-footer{
 	background: #333;
@@ -175,19 +197,20 @@ h3{
 	-o-background-size: cover;
 	background-size: cover;
 	opacity: 0.5;
-	height: 600px;
-	background-position-y: 0px;
+	height: 700px;
+	background-position-y: -100px;
 }
 
 .parallax-layer-back #trusted-renovators-bg{
 	background: url() no-repeat center 33%;
-	background-position-y: -240px;
+	background-position-y: -200px;
+    background-position-x: -450px;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	margin-top: 450px;
-	height: 600px;
+	margin-top: 300px;
+	height: 900px;
 }
 
 
@@ -197,7 +220,7 @@ h3{
     line-height: 110%;
 	color: #ffffff;
 	font-weight: 100;
-	padding: 27vh 0vh 20vh 0vh;
+	padding: 27vh 0vh;
 }
 
 #hero-title a{
@@ -240,7 +263,13 @@ h3{
 	color: #333;
 	line-height: 120%;
 	font-weight: 300;
-	padding: 15vh 0vh 10vh 10vh;
+	padding: 15vh 10vh 12vh 10vh;
+}
+
+#trusted-renovators-section .city{
+    font-size: 32px;
+    line-height: 100%;
+    margin-top: 30px;
 }
 
 
@@ -271,7 +300,7 @@ h3{
 }
 
 #specialize-section h1{
-	padding-top: 90px;
+	padding-top: 70px;
 	font-size: 60px;
 }
 
@@ -308,15 +337,16 @@ h3{
 	margin: 0 auto;
 }
 
+.specialize-row .col-sm-6{
+    padding: 0 !important;
+}
+
 .specialize-bg{
 	background: url() no-repeat center 33%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	width: 80%;
-	margin: 30px auto;
-
 	-webkit-transition: all 500ms;
   	-moz-transition: all 500ms;
   	-o-transition: all 500ms;
@@ -324,20 +354,21 @@ h3{
 
 }
 
-.specialize-bg:hover{
-	opacity: 0.6;
-}
-
 .specialize-bg:hover .specialize-text{
-	font-size: 65px !important;
+	background: rgba(255, 255, 255, 0.4);
 }
 
 .specialize-text{
 	padding: 155px 0;
+    color: #333;
 	-webkit-transition: all 500ms;
   	-moz-transition: all 500ms;
   	-o-transition: all 500ms;
  	transition: all 500ms;
+}
+
+.specialize-text h2{
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .what-we-do-text{
@@ -346,6 +377,7 @@ h3{
 	line-height: 150%;
 	font-weight: 200;
 	letter-spacing: 0.5px;
+    width: 95%;
 }
 
 .what-we-do-img{
@@ -361,10 +393,10 @@ h3{
 .recent-project-img{
 	width: 100%;
 	margin: 30px auto;
+    height: 220px;
 }
 
 #get-quote-section{
-	padding: 0px 60px 30px 60px;
 	text-align: center;
 }
 
@@ -377,7 +409,7 @@ h3{
 }
 
 #logos-section{
-	padding: 50px;
+	padding: 50px 0px;
 	background: #333;
 }
 
@@ -607,7 +639,7 @@ h3{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	opacity: 0.6;
+
 }
 
 .service-container a{
@@ -625,8 +657,12 @@ h3{
 
 .service-container .read-more{
 	text-align: center;
-	font-size: 20px;
+	font-size: 18px;
 	margin-top: 40px;
+}
+
+.service-container .read-more a{
+    color: #999;
 }
 
 .services-get-quote{
@@ -652,12 +688,11 @@ h3{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	padding: 150px 0px;
+	padding: 100px 0px;
 	margin: 30px 0px;
 	border-top: 1px solid #888;
 	border-bottom: 1px solid #888;
-	opacity: 0.8;
-	background-position-y:-480px;
+	opacity: 0.7;
 }
 
 
@@ -665,6 +700,7 @@ h3{
 	text-align: center;
 	padding: 20px 40px;
 	background: #333;
+    border-radius: 2px;
 	width: 80%;
 	margin: 0 auto;
 }
@@ -861,28 +897,13 @@ h3{
         margin-top: 16px;
     }
 
-    .navbar-toggle{
-        font-size: 30px;
-    }
-
-    .dropdown-menu{
-        background: #333;
-        right: 0;
-        left: inherit;
-        top: 50px;
-        width: 70%;
-        padding: 10px;
-    }
-
-    .dropdown-menu li{
-        padding: 10px;
-        font-size: 20px;
-        text-align: right;
-    }
-
     #hero-title{
-        padding: 20vh 0vh;
-        font-size: 50px;
+        padding: 20vh 0vh !important;
+        font-size: 37px;
+    }
+
+    .parallax-layer-back #hero-shot-bg {
+        height: 600px !important;
     }
 
     .what-we-do-col{
@@ -902,8 +923,16 @@ h3{
     }
 
     .specialize-text{
-        padding: 100px 0px;
-        font-size: 45px;
+        padding: 60px 0px;
+        margin-top: 30px;
+    }
+
+    .specialize-text h2{
+        font-size: 45px !important;
+    }
+
+    .specialize-bg:hover .specialize-text{
+    	font-size: 45px !important;
     }
 
     #specialize-section{
@@ -946,5 +975,142 @@ h3{
         display: none;
     }
 
+    .pages-header{
+        font-size: 50px;
+    }
 
+    #our-services p{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .our-services-banner{
+        height: 200px;
+    }
+
+    .service-container .read-more {
+        margin-bottom: 20px;
+    }
+
+    .about-us-bg{
+        padding: 50px 0px;
+        background-size: initial;
+    }
+
+    .about-us-summary{
+        width: 90%;
+        padding: 20px;
+    }
+
+    .our-process-container{
+        display: none;
+    }
+
+    .testimonial-row{
+        padding: 30px 10px;
+    }
+
+    .contact-us-form{
+        width: 95%;
+    }
+
+    .captcha_container{
+        width: 100%;
+    }
+
+    .captcha_container img{
+        width: 70%;
+    }
+
+    .captcha_container input{
+        width: 95%;
+        margin: 20px 0px 0px 0px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+    #menu-mobile{
+        display: block !important;
+    }
+
+    #menu-mobile .dropdown-toggle{
+        display: block !important;
+    }
+
+    .parallax-layer-back #hero-shot-bg {
+        height: 800px;
+    }
+
+    #hero-title {
+        padding: 18vh 0vh;
+    }
+
+    .specialize-bg {
+        width: 100%;
+    }
+
+    .specialize-text{
+        font-size: 50px;
+    }
+
+    #specialize-section h1 {
+        padding-top: 0px;
+    }
+
+    #specialize-section{
+        padding-bottom: 10px;
+    }
+
+    #trusted-renovators-section{
+        display: none;
+    }
+
+    #get-quote-section h1 {
+        font-size: 30px;
+    }
+
+    .logo-image {
+        max-width: 150px;
+    }
+
+    #our-services p {
+        margin-top: 15px;
+        font-size: 19px;
+        width: 90%;
+    }
+
+    .about-us-bg {
+        padding: 50px 0px;
+        background-size: initial;
+    }
+
+    .contact-us-form {
+        width: 90%;
+    }
+
+    .captcha_container {
+        width: 90%;
+    }
+
+    .captcha_container img{
+        width: 70%;
+    }
+
+    .captcha_container input{
+        width: 100%;
+        margin: 20px 0px;
+    }
+}
+
+@media screen and (min-width: 1450px){
+   .parallax-layer-back #hero-shot-bg {
+   	height:800px;
+   	background-position-y: -250px;
+   }
+   
+   .parallax-layer-back #trusted-renovators-bg{
+   	background-position-x: -122px;
+   }
 }

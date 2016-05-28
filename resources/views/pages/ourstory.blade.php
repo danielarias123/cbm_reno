@@ -1,10 +1,15 @@
 @extends('layouts.layout')
 
+@section('title', 'CBM Renovations – Mississauga, Toronto, Burlington &amp; Oakville&#039;s Leading Construction Company')
+@section('description', 'CBM Renovations in known and trusted all over the GTA. Contact Us Anytime to Get a Free Quote on Our Services.')
+@section('url', 'http://www.cbmreno.ca/ourstory')
+@section('type', 'article')
+
 @section('content')
 
 <!-- Mixpanel Tracking -->
 <script type="text/javascript">
-//mixpanel.track("Our Story Page View");
+mixpanel.track("Our Story Page View");
 </script>
 
 <section id = 'our-story' class = "webpage-section">
@@ -15,9 +20,9 @@
 			</div>
 		</div>
 	</div>
-	<div class = "about-us-bg" style = "background-image:url(/images/about-us-bg.jpg);">
+	<div class = "about-us-bg" style = "background-image:url(/images/our-story-header.jpg);">
 		<div class = "about-us-summary" >
-			<p class = "testimonial-text" >We are a residential and commercial renovations company servicing the GTA for over 20 years.<br/>
+			<p class = "testimonial-text" >We are a residential and commercial renovations company servicing the GTA for over 10 years.<br/>
 				At CBM Renovations, we take pride in our work and care about your project just as much as you do.
 			</p>
 			<div class = "see-testimonials-link"><a href = "/testimonials"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;See what our clients have to say</a></div>
@@ -85,7 +90,7 @@
 							<div class ="process-step-arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
 						</div>
 						<div class = "process-step-cont">
-							<div class = "process-step"> 
+							<div class = "process-step">
 								<div class="step-num">3</div><br/>Project Realization
 								<div class = "step-desc">Your project is completed on time and within budget</div>
 							</div>
@@ -101,7 +106,7 @@
 			<div class = "col-sm-12">
 				<section id = "get-quote-section" class = 'services-get-quote'>
 					<h1>The first step is contacting us</h1>
-					<a href = "/contact-us" id = "our-story-quote-btn"><button class = "hero-shot-btn">Get Started</button></a>
+					<a href = "#" id = "our-story-quote-btn"><button class = "hero-shot-btn">Get Started</button></a>
 				</section>
 			</div>
 			<!-- End Get Quote Section -->
@@ -121,7 +126,11 @@
 	$(document).ready(function(){
 
 		// Mixpanel Tracking
-		$("#our-story-quote-btn").click(function(){
+		$("#our-story-quote-btn").click(function(e){
+			e.preventDefault();
+            // Show the Contact Modal
+            $('#contactModal').modal();
+
 			// Send mixpanel event
 			mixpanel.track("Get Quote", {
 				"Source": "Our Story Page"

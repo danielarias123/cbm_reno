@@ -5,12 +5,30 @@
 		<meta charset = "UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>CBM Renovations</title>
+		<title>@yield('title')</title>
+
+		<!-- MetaData -->
+		<meta name="description" content="@yield('description')">
+		<link rel="canonical" href="@yield('url')" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="@yield('type')" />
+		<meta property="og:title" content="@yield('title')" />
+		<meta property="og:description" content="@yield('description')" />
+		<meta property="og:url" content="@yield('url')" />
+		<!-- End MetaData -->
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,100' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
 		<script src="/jquery/dist/jquery.min.js"></script>
 		<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+		<link rel="icon" type="image/png" href="/images/cbm-logo192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/cbm-logo160.png" sizes="160x160">
+		<link rel="icon" type="image/png" href="/images/cbm-logo96" sizes="96x96">
+		<link rel="icon" type="image/png" href="/images/cbm-logo32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/images/cbm-logo16.png" sizes="16x16">
 
 
 		<!-- start Mixpanel -->
@@ -20,7 +38,7 @@ for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElemen
 mixpanel.init("a00df3c695e5cc3b99b810766c4561b2");
 		</script>
 		<!-- end Mixpanel -->
-		
+
 		@yield('header')
 
 	</head>
@@ -30,17 +48,22 @@ mixpanel.init("a00df3c695e5cc3b99b810766c4561b2");
 	        @include('includes.header')
 	    </header>
 		@yield('content')
+		@include('includes.contact-modal')
 
 		<script type="text/javascript">
 
 		$(document).ready(function(){
+
+		$('[data-toggle=dropdown]').each(function() {
+ this.addEventListener('click', function() {}, false);
+});
 
 			$(window).scroll(function(){
 
 					// Style Navbar Header
 				    if($(".webpage-section").offset().top < $(document).scrollTop()){
 
-				    	$( "#nav-header").css({ 
+				    	$( "#nav-header").css({
 				    		'border-bottom':'1px solid #666',
 				    		'color':'#b5b5b5',
 				    		'background': 'rgba(51,51,51,'+Math.abs($(".webpage-section").offset().top/80)+')'
@@ -50,7 +73,7 @@ mixpanel.init("a00df3c695e5cc3b99b810766c4561b2");
 				    		'color':'#b5b5b5'
 				    	});
 				    }else{
-				    	$( "#nav-header").css({'background': 'rgba(51,51,51,0.2)', 
+				    	$( "#nav-header").css({'background': 'rgba(51,51,51,0.2)',
 				    		'border-bottom':'none',
 				    		'color':"#fff"});
 
